@@ -29,7 +29,7 @@ namespace test_J_DataTable_3.Controllers
         /// <item>iTotalDisplayRecords - Total number of filtered data. This value is used in the message: 
         /// "Showing *start* to *end* of *iTotalDisplayRecords* entries (filtered from *iTotalDisplayRecords* total entries)
         /// </item>
-        /// <item>aoData - Twodimensional array of values that will be displayed in table. 
+        /// <item>aoData - Two dimensional array of values that will be displayed in table. 
         /// Number of columns must match the number of columns in table and number of rows is equal to the number of records that should be displayed in the table</item>
         /// </list>
         /// </returns>
@@ -40,12 +40,12 @@ namespace test_J_DataTable_3.Controllers
             //Check whether the companies should be filtered by keyword
             if (!string.IsNullOrEmpty(param.sSearch))
             {
-                //Used if particulare columns are filtered 
+                //Used if particular columns are filtered 
                 var nameFilter = Convert.ToString(Request["sSearch_1"]);
                 var addressFilter = Convert.ToString(Request["sSearch_2"]);
                 var townFilter = Convert.ToString(Request["sSearch_3"]);
 
-                //Optionally check whether the columns are searchable at all 
+                //Optionally check whether the columns are search able at all 
                 var isNameSearchable = Convert.ToBoolean(Request["bSearchable_1"]);
                 var isAddressSearchable = Convert.ToBoolean(Request["bSearchable_2"]);
                 var isTownSearchable = Convert.ToBoolean(Request["bSearchable_3"]);
